@@ -7,6 +7,7 @@ const userRouter=require('./routes/userRoutes')
 const messageRouter=require('./routes/messageRoutes')
 const conversationRouter=require('./routes/conversationRoutes')
 const userModel = require('./model/userModel')
+const socketPort = process.env.SOCKET_PORT || 9001
 const io=require('socket.io')(9001,{
   cors:{
     origin:'*'
